@@ -1,21 +1,20 @@
 
 //Primera parte-----creando todo desde js
-
 //Tengo que crear un div que va a contener a un label, que a su vez tendrá un texto adentro
 var container = document.createElement("div"); // div contenedor
 container.setAttribute("id","contenedor");//Al div debo entregarle un atributo y un valor
 
-var label = document.createElement("label"); //label que irá dentro del div contenedor
+var label = document.createElement("span"); //label que irá dentro del div contenedor
 label.setAttribute("id","texlabel");
 
 //necesito que label tenga dentro un texto, por eso creo un nodo texto
-var anadirLista = document.createTextNode("Añadir lista");//El texto que se mostrará en pantalla, es el texto que va entre comillas
+var anadirLista = document.createTextNode("Añadir una lista");//El texto que se mostrará en pantalla, es el texto que va entre comillas
 
 //añadiendo mis nodos al dom
 //necesito colocar el nodo texto en label y label en mi div contenedor
 label.appendChild(anadirLista); //el padre contiene al hijo
 container.appendChild(label);
-//con esto añado 
+//con esto añado el contenedor general a body en html
 document.body.appendChild(container);
 
 //Segunda parte-----
@@ -109,6 +108,8 @@ boton.addEventListener("click", function(){
 
 //});
 //display none en js para el div más pequeño
+
+
 
  //necesitamos un div que encierre a la segunda parte
 //crear funcion onclick para que aparezca
